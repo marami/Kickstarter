@@ -21,10 +21,10 @@ public class Question {
 	@Column(name = "id", unique = true, nullable = false)
 	private Long questionId;
 
-	@Column
+	@Column(nullable = false)
 	private String time;
 
-	@Column
+	@Column(nullable = false)
 	private String question;
 
 	@Column
@@ -106,4 +106,5 @@ public class Question {
 		Question other = (Question) obj;
 		return this.questionId == other.questionId;
 	}
+
 }

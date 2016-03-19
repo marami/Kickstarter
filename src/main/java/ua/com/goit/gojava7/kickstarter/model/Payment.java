@@ -23,13 +23,13 @@ public class Payment {
 	@Column(name = "id", unique = true, nullable = false)
 	private Long paymentId;
 
-	@Column
+	@Column(nullable = false)
 	private String user;
 
-	@Column
+	@Column (nullable = false)
 	private String card;
 
-	@Column
+	@Column (nullable = false)
 	private Long amount;
 
 	@ManyToOne(cascade = CascadeType.ALL)
@@ -115,4 +115,5 @@ public class Payment {
 		Payment other = (Payment) obj;
 		return this.paymentId == other.paymentId;
 	}
+
 }

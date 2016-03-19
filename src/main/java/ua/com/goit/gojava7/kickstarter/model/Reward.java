@@ -19,7 +19,7 @@ public class Reward {
 	@Column(name = "id", unique = true, nullable = false)
 	private Long rewardId;
 
-	@Column
+	@Column(nullable = false)
 	private Long amount;
 
 	@Column
@@ -109,4 +109,5 @@ public class Reward {
 		}
 		return true;
 	}
+	
 }

@@ -27,7 +27,7 @@ public class Category {
 	@Column(name = "id", unique = true, nullable = false)
 	private Long categoryId;
 
-	@Column
+	@Column(nullable = false)
 	private String name;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
@@ -96,4 +96,5 @@ public class Category {
 		}
 		return true;
 	}
+
 }

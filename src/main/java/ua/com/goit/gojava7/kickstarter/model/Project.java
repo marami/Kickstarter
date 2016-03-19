@@ -30,16 +30,16 @@ public class Project {
 	@Column(name = "id", unique = true, nullable = false)
 	private Long projectId;
 
-	@Column
+	@Column(nullable = false)
 	private String name;
 
-	@Column
+	@Column(nullable = false)
 	private String description;
 
-	@Column
+	@Column(nullable = false)
 	private Long goal;
 
-	@Column
+	@Column(nullable = false)
 	private Long daysToGo;
 
 	@Column
@@ -197,4 +197,5 @@ public class Project {
 		}
 		return true;
 	}
+
 }

@@ -19,8 +19,10 @@ public class Quote {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
 	private Long quoteId;
-	@Column
+
+	@Column (nullable = false)
 	private String text;
+
 	@Column
 	private String author;		
 
@@ -85,4 +87,5 @@ public class Quote {
 		}
 		return true;
 	}
+
 }
