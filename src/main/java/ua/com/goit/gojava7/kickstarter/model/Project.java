@@ -30,7 +30,7 @@ public class Project {
 	@Column(name = "id", unique = true, nullable = false)
 	private Long projectId;
 
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String name;
 
 	@Column(nullable = false)

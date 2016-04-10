@@ -20,7 +20,7 @@ public class Quote {
 	@Column(name = "id", unique = true, nullable = false)
 	private Long quoteId;
 
-	@Column (nullable = false)
+	@Column (nullable = false, unique = true)
 	private String text;
 
 	@Column

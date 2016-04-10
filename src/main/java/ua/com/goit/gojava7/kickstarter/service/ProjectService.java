@@ -96,8 +96,9 @@ public class ProjectService {
     protected List<ProjectDto> constuctShortProjectDto(List<Project> projects) {
         List<ProjectDto> projectsDto = new ArrayList<>();
 
-        for(Project project : projects)
+        for(Project project : projects) {
             projectsDto.add(constuctShortProjectDto(project));
+        }
 
         return projectsDto;
     }
