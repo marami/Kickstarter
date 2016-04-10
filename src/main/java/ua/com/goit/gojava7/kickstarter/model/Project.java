@@ -177,25 +177,22 @@ public class Project {
 		if (this == obj) {
 			return true;
 		}
-		if (obj == null) {
+
+		if (this == null || obj == null) {
 			return false;
 		}
+
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
 
 		Project other = (Project) obj;
-		if (this.projectId != null & other.projectId != null) {
-			if (this.projectId != other.projectId) {
-				return false;
-			}
+
+		if (this.projectId == null || other.projectId == null) {
+			return false;
 		}
-		if (this.name != null & other.name != null) {
-			if (this.name != other.name) {
-				return false;
-			}
-		}
-		return true;
+
+		return this.projectId.equals(other.projectId);
 	}
 
 }

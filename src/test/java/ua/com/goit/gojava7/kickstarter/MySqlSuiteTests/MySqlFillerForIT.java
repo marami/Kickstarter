@@ -44,10 +44,16 @@ public class MySqlFillerForIT {
 
         Project project1 = new Project();
         project1.setName("Test Project 1");
+        project1.setDescription("Test Description 1");
+        project1.setGoal(100L);
+        project1.setDaysToGo(11L);
         project1.setCategory(category1);
 
         Project project2 = new Project();
         project2.setName("Test Project 2");
+        project2.setDescription("Test Description 2");
+        project2.setGoal(200L);
+        project2.setDaysToGo(22L);
         project2.setCategory(category1);
 
         Payment payment1 = new Payment();

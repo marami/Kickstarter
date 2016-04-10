@@ -76,25 +76,22 @@ public class Category {
 		if (this == obj) {
 			return true;
 		}
-		if (obj == null) {
+
+		if (this == null || obj == null) {
 			return false;
 		}
+
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
 
 		Category other = (Category) obj;
-		if (this.categoryId != null & other.categoryId != null) {
-			if (this.categoryId != other.categoryId) {
-				return false;
-			}
+
+		if (this.categoryId == null || other.categoryId == null) {
+			return false;
 		}
-		if (this.name != null & other.name != null) {
-			if (this.name != other.name) {
-				return false;
-			}
-		}
-		return true;
+
+		return this.categoryId.equals(other.categoryId);
 	}
 
 }

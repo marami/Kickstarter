@@ -68,24 +68,22 @@ public class Quote {
 		if (this == obj) {
 			return true;
 		}
-		if (obj == null) {
+
+		if (this == null || obj == null) {
 			return false;
 		}
+
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
+
 		Quote other = (Quote) obj;
-		if (this.quoteId != null & other.quoteId != null) {
-			if (this.quoteId != other.quoteId) {
-				return false;
-			}
+
+		if (this.quoteId == null || other.quoteId == null) {
+			return false;
 		}
-		if (this.text != null & other.text != null) {
-			if (this.text != other.text) {
-				return false;
-			}
-		}
-		return true;
+
+		return this.quoteId.equals(other.quoteId);
 	}
 
 }

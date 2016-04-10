@@ -105,7 +105,7 @@ public class Payment {
 		if (this == obj) {
 			return true;
 		}
-		if (obj == null) {
+		if (this == null || obj == null) {
 			return false;
 		}
 		if (getClass() != obj.getClass()) {
@@ -113,7 +113,8 @@ public class Payment {
 		}
 
 		Payment other = (Payment) obj;
-		return this.paymentId == other.paymentId;
+
+		return this.paymentId.equals(other.paymentId);
 	}
 
 }

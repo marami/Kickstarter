@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 
@@ -77,5 +78,12 @@ public class ProjectTest extends Assert {
 		assertThat(project.getRewards(), is(rewards));
 		assertThat(project.getPayments(), is(payments));
 		assertThat(project.getCategoryId(), is(22L));
+	}
+
+	@Test
+	public void testToString() {
+		assertThat(project.toString(), containsString("TestHistory"));
+		assertThat(project.toString(), is("Project [projectId=11, name=TestName, description=TestDescription, goal=100," +
+				" daysToGo=3, history=TestHistory, link=TestLink, categoryId=22]"));
 	}
 }

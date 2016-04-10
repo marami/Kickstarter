@@ -68,7 +68,7 @@ public class CategoryTest extends Assert {
 		category1.setName("Dance");
 
 		Category category2 = new Category();
-		category1.setCategoryId(10L);
+		category2.setCategoryId(10L);
 		category2.setName("Dance");
 
 		assertTrue(category1.equals(category2));
@@ -101,23 +101,10 @@ public class CategoryTest extends Assert {
 	}
 
 	@Test
-	public void testEqualsIfNameUnequalsReturnFalse() {
+	public void testEqualsIfEmptyReturnFalse() {
 		Category category1 = new Category();
-		category1.setCategoryId(10L);
-		category1.setName("Dance");
-
 		Category category2 = new Category();
-		category2.setCategoryId(10L);
-		category2.setName("Movie");
 
 		assertFalse(category1.equals(category2));
-	}
-
-	@Test
-	public void testEqualsIfEmptyReturnTrue() {
-		Category category1 = new Category();
-		Category category2 = new Category();
-
-		assertTrue(category1.equals(category2));
 	}
 }

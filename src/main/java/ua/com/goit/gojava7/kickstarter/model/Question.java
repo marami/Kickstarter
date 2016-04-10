@@ -97,14 +97,22 @@ public class Question {
 		if (this == obj) {
 			return true;
 		}
-		if (obj == null) {
+
+		if (this == null || obj == null) {
 			return false;
 		}
+
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
+
 		Question other = (Question) obj;
-		return this.questionId == other.questionId;
+
+		if (this.questionId == null || other.questionId == null) {
+			return false;
+		}
+
+		return this.questionId.equals(other.questionId);
 	}
 
 }

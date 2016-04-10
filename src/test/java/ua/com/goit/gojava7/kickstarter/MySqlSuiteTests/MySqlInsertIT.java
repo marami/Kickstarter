@@ -39,6 +39,9 @@ public class MySqlInsertIT {
 
         Project project = new Project();
         project.setName("New project for test");
+        project.setDescription("About project");
+        project.setGoal(1000L);
+        project.setDaysToGo(11L);
         project.setCategory(category);
 
         Question question = new Question();
@@ -60,6 +63,9 @@ public class MySqlInsertIT {
 
         Project project = new Project();
         project.setName("New project for test adding payment");
+        project.setDescription("About project");
+        project.setGoal(1000L);
+        project.setDaysToGo(11L);
         project.setCategory(category);
 
         Payment payment = new Payment();

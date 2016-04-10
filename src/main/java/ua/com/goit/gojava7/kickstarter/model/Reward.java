@@ -84,30 +84,22 @@ public class Reward {
 		if (this == obj) {
 			return true;
 		}
-		if (obj == null) {
+
+		if (this == null || obj == null) {
 			return false;
 		}
+
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
 
 		Reward other = (Reward) obj;
-		if (this.rewardId != null & other.rewardId != null) {
-			if (this.rewardId != other.rewardId) {
-				return false;
-			}
+
+		if (this.rewardId == null || other.rewardId == null) {
+			return false;
 		}
-		if (this.amount != null & other.amount != null) {
-			if (this.amount != other.amount) {
-				return false;
-			}
-		}
-		if (this.reward != null & other.reward != null) {
-			if (!this.reward.equals(other.reward)) {
-				return false;
-			}
-		}
-		return true;
+
+		return this.rewardId.equals(other.rewardId);
 	}
 	
 }
