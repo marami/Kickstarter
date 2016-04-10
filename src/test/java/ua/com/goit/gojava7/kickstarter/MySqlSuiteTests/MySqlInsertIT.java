@@ -1,5 +1,6 @@
 package ua.com.goit.gojava7.kickstarter.MySqlSuiteTests;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,17 +33,24 @@ public class MySqlInsertIT {
     @Autowired
     private PaymentDao paymentDao;
 
-    @Test
-    public void testAddQuestion() {
-        Category category = new Category();
+    private Category category;
+    private Project project;
+
+    @Before
+    public void testSetUp() {
+        category = new Category();
         category.setName("New category for test");
 
-        Project project = new Project();
+        project = new Project();
         project.setName("New project for test");
         project.setDescription("About project");
         project.setGoal(1000L);
         project.setDaysToGo(11L);
         project.setCategory(category);
+    }
+
+    @Test
+    public void testAddQuestion() {
 
         Question question = new Question();
         question.setQuestion("New Question for test");
@@ -54,19 +62,11 @@ public class MySqlInsertIT {
 
         assertThat(categoryDao.get(categoryId).getName(), is("New category for test"));
         assertThat(projectDao.get(projectId).getName(), is("New project for test"));
+
     }
 
     @Test
     public void testAddPayment() {
-        Category category = new Category();
-        category.setName("New category for test adding payment");
-
-        Project project = new Project();
-        project.setName("New project for test adding payment");
-        project.setDescription("About project");
-        project.setGoal(1000L);
-        project.setDaysToGo(11L);
-        project.setCategory(category);
 
         Payment payment = new Payment();
         payment.setAmount(100L);
@@ -78,8 +78,10 @@ public class MySqlInsertIT {
         Long categoryId = category.getCategoryId();
         Long projectId = project.getProjectId();
 
-        assertThat(categoryDao.get(categoryId).getName(), is("New category for test adding payment"));
-        assertThat(projectDao.get(projectId).getName(), is("New project for test adding payment"));
+        assertThat(categoryDao.get(categoryId).getName(), is("New category for test"));
+        assertThat(projectDao.get(projectId).getName(), is("New project for test"));
         assertThat(paymentDao.getPledged(projectId), is(100L));
+        
     }
+
 }
