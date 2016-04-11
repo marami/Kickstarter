@@ -73,3 +73,23 @@ body {
 .module-main {
     margin: 20px 40px auto 40px;
 }
+
+.bottom {
+    overflow: auto;
+    background-color: #2aabd2;
+    letter-spacing: 1px;
+    border: solid 1px #2aabd2;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    text-align: center;
+    padding: 15px;
+}
+
+.bottom a {
+    margin-right: 30px;
+    color: white;
+    text-decoration: none;
+}
+
