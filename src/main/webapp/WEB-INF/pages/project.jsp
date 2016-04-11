@@ -4,7 +4,6 @@
 </jsp:include>
 
 <div class="top">
-
 	<div class="top-left">
 		<a href="index"><img src="/pages/pictures/kickstarter.png"></a>
 	</div>
@@ -21,50 +20,49 @@
 				<a href="<c:url value="/j_spring_security_logout" />" > Logout</a></h3>
 		</c:if>
 	</div>
-
 </div>
 
 <div class="below-top">
+	<div class="module-main">
+		<h1><a href="category?categoryId=${category.categoryId}">${category.name}</a></h1>
+		<h1>${project.name}</h1>
+		<h3>${project.description} </h3>
+		<cite>
+			<br>Goal: ${project.goal}
+			<br>Pledged: ${project.pledged}
+			<br>Days to go: ${project.daysToGo}
+		</cite>
+		<h3>About this project</h3>${project.history}
+		<br><br><cite>Demo video: ${project.link}</cite>
 
-	<h1><a href="category?categoryId=${category.categoryId}">${category.name}</a></h1>
-	<h1>${project.name}</h1>
-	<h3>${project.description} </h3>
-	<cite>
-		<br>Goal: ${project.goal}
-		<br>Pledged: ${project.pledged}
-		<br>Days to go: ${project.daysToGo}
-	</cite>
-	<h3>About this project</h3>${project.history}
-	<br><br><cite>Demo video: ${project.link}</cite>
+		<h3><a href="reward?projectId=${project.projectId}">See rewards</a></h3>
 
-	<h3><a href="reward?projectId=${project.projectId}">See rewards</a></h3>
+		<form action="question" method="post">
+			<br>Ask your question:
+			<br><textarea name="question" rows="5" cols="60"></textarea>
+			<br> <input type="hidden" name="projectId" value="${project.projectId}" />
+			<input type="submit" value="Submit" />
+			<input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
+		</form>
 
-	<form action="question" method="post">
-		<br>Ask your question:
-		<br><textarea name="question" rows="5" cols="60"></textarea>
-		<br> <input type="hidden" name="projectId" value="${project.projectId}" />
-		<input type="submit" value="Submit" />
-		<input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
-	</form>
+		<c:if test="${empty questions}"><h3>There are no questions</h3></c:if>
 
-	<c:if test="${empty questions}"><h3>There are no questions</h3></c:if>
-
-	<c:if test="${not empty questions}">
-		<h3>Questions:</h3>
-		<ul>
-			<c:forEach var="question" items="${requestScope.questions}">
-				<li>
-					<p>
-						<cite>${question.time}
-							<br>${question.question}
-							<br>${question.answer}
-						</cite>
-					</p>
-				</li>
-			</c:forEach>
-		</ul>
-	</c:if>
-
+		<c:if test="${not empty questions}">
+			<h3>Questions:</h3>
+			<ul>
+				<c:forEach var="question" items="${requestScope.questions}">
+					<li>
+						<p>
+							<cite>${question.time}
+								<br>${question.question}
+								<br>${question.answer}
+							</cite>
+						</p>
+					</li>
+				</c:forEach>
+			</ul>
+		</c:if>
+	</div>
 </div>
 
 <jsp:include page="footer.jsp" />

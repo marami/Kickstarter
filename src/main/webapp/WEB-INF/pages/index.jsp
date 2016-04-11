@@ -4,7 +4,6 @@
 </jsp:include>
 
 <div class="top">
-
 	<div class="top-left">
 		<a href="index"><img src="/pages/pictures/kickstarter.png"></a>
 	</div>
@@ -21,20 +20,21 @@
 				<a href="<c:url value="/j_spring_security_logout" />" > Logout</a></h3>
 		</c:if>
 	</div>
-
 </div>
 
 <div class="below-top">
-	<em>${quote.text}</em> <em>${quote.author}</em>
+	<div class="module-quote">
+		<em>${quote.text}</em> <em>${quote.author}</em>
+	</div>
 
-	<p>Categories:</p>
-	<ul>
-		<c:forEach var="category" items="${requestScope.categories}">
-			<li><a href="category?categoryId=${category.categoryId}">${category.name}</a></li>
-		</c:forEach>
-	</ul>
+	<div class="module-main">
+		<h1>Categories:</h1>
+		<ul>
+			<c:forEach var="category" items="${requestScope.categories}">
+				<li><a href="category?categoryId=${category.categoryId}">${category.name}</a></li>
+			</c:forEach>
+		</ul>
+	</div>
 </div>
-
-
 	
 <jsp:include page="footer.jsp" />

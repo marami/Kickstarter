@@ -4,7 +4,6 @@
 </jsp:include>
 
 <div class="top">
-
 	<div class="top-left">
 		<a href="index"><img src="/pages/pictures/kickstarter.png"></a>
 	</div>
@@ -21,18 +20,17 @@
 				<a href="<c:url value="/j_spring_security_logout" />" > Logout</a></h3>
 		</c:if>
 	</div>
-
 </div>
 
 <div class="below-top">
+	<div class="module-main">
+		<h1><a href="category?categoryId=${category.categoryId}">${category.name}</a></h1>
+		<h1><a href="project?projectId=${project.projectId}">${project.name}</a></h1>
 
-	<h1><a href="category?categoryId=${category.categoryId}">${category.name}</a></h1>
-	<h1><a href="project?projectId=${project.projectId}">${project.name}</a></h1>
+		<h3>Thanks for your donation!</h3>
 
-	<h3>Thanks for your donation!</h3>
-
-	<br>$${amount} will be transferred to the project<br>
-
+		<br>$${amount} will be transferred to the project<br>
+	</div>
 </div>
 
 <jsp:include page="footer.jsp" />

@@ -18,6 +18,7 @@ body {
     width: 100%;
     top: 0px;
     left: 0px;
+    border: solid 1px #2aabd2;
 }
 
 .top img {
@@ -58,5 +59,17 @@ body {
 
 .below-top {
     margin-top: 80px;
-    width: 50%;
+    width: 100%;
+}
+
+.module-quote {
+    background-color: transparent;
+    border: solid 1px transparent;
+    margin: 20px 40px auto 40px;
+    width: 100%;
+    height: auto;
+}
+
+.module-main {
+    margin: 20px 40px auto 40px;
 }
