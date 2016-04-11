@@ -1,11 +1,50 @@
 body {
-    background-color: #def7e0
+    background-color: #def7e0;
+    margin: auto;
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
-h3 {
-    color: red;
+.top {
+    overflow: auto;
+    height: 60px;
+    align-items: center;
+    background-color: #2aabd2;
 }
 
-img {
-    width: 250px;
+.top img {
+    display: inline-block;
+    height: 19px;
+    float: left;
+    text-indent: -9999px;
+    width: 159px;
+    margin: 20px auto auto 40px;
+}
+
+.top-right {
+    float: right;
+    width: 50%;
+    overflow: hidden;
+    height: 60px;
+}
+
+.top-right h3{
+    float: right;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.top-right h3 a {
+    float: right;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.top-left {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    height: 60px;
+    align-content: center;
 }

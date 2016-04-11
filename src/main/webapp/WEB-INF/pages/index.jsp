@@ -3,26 +3,33 @@
 	<jsp:param name="title" value="Kickstarter" />
 </jsp:include>
 
-<c:if test="${pageContext.request.userPrincipal.name == null}">
-	<h3><a href="login">Login</a></h3>
-</c:if>
+<div class="top">
 
-<c:if test="${pageContext.request.userPrincipal.name != null}">
-	<h3>Welcome : ${pageContext.request.userPrincipal.name} |
-		<a href="<c:url value="/j_spring_security_logout" />" > Logout</a></h3>
-</c:if>
+	<div class="top-left">
+		<img src="/pages/pictures/kickstarter.png">
+	</div>
 
+	<div class="top-right">
+		<h3><a href=#>Sign in</a></h3>
 
-<div> </div>
-<h1><img src="/pages/pictures/kickstarter.png"></h1>
+		<c:if test="${pageContext.request.userPrincipal.name == null}">
+			<h3><a href="login">Log in</a></h3>
+		</c:if>
 
-	<em>${quote.text}</em> <em>${quote.author}</em>
+		<c:if test="${pageContext.request.userPrincipal.name != null}">
+			<h3>Welcome : ${pageContext.request.userPrincipal.name} |
+				<a href="<c:url value="/j_spring_security_logout" />" > Logout</a></h3>
+		</c:if>
+	</div>
 
-	<p>Categories:</p>
-	<ul>
-		<c:forEach var="category" items="${requestScope.categories}">
-			<li><a href="category?categoryId=${category.categoryId}">${category.name}</a></li>
-		</c:forEach>
-	</ul>	
+</div>
+<em>${quote.text}</em> <em>${quote.author}</em>
+
+<p>Categories:</p>
+<ul>
+	<c:forEach var="category" items="${requestScope.categories}">
+		<li><a href="category?categoryId=${category.categoryId}">${category.name}</a></li>
+	</c:forEach>
+</ul>
 	
 <jsp:include page="footer.jsp" />
