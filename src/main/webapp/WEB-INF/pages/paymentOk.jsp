@@ -24,11 +24,15 @@
 
 </div>
 
-<h1><a href="category?categoryId=${category.categoryId}">${category.name}</a></h1>
-<h1><a href="project?projectId=${project.projectId}">${project.name}</a></h1>
+<div class="below-top">
 
-<h3>Thanks for your donation!</h3>
+	<h1><a href="category?categoryId=${category.categoryId}">${category.name}</a></h1>
+	<h1><a href="project?projectId=${project.projectId}">${project.name}</a></h1>
 
-<br>$${amount} will be transferred to the project<br>
+	<h3>Thanks for your donation!</h3>
+
+	<br>$${amount} will be transferred to the project<br>
+
+</div>
 
 <jsp:include page="footer.jsp" />

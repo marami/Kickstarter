@@ -24,20 +24,24 @@
 
 </div>
 
-<h1><a href="category?categoryId=${category.categoryId}">${category.name}</a></h1>
-<h1><a href="project?projectId=${project.projectId}">${project.name}</a></h1>
+<div class="below-top">
 
-<h3>Amount of your donation is $${amount}</h3>
+	<h1><a href="category?categoryId=${category.categoryId}">${category.name}</a></h1>
+	<h1><a href="project?projectId=${project.projectId}">${project.name}</a></h1>
 
-<form action="paymentCheck" method="post">
+	<h3>Amount of your donation is $${amount}</h3>
 
-<font color=red><c:if test="${not empty message}">${message}</c:if></font >
-<br><br>Enter your name: <input type="text" name="name" value="" size=20 maxlength=20><br>
-<br>Enter your card's number: <input type="text" name="card" value="" size=20 maxlength=16><br>
-<input type="hidden" name="projectId" value="${project.projectId}"/>
-<input type="hidden" name="amount" value="${amount}"/>
-<input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
-<br><input type="submit" value="Submit">
-</form>
+	<form action="paymentCheck" method="post">
+
+		<font color=red><c:if test="${not empty message}">${message}</c:if></font >
+		<br><br>Enter your name: <input type="text" name="name" value="" size=20 maxlength=20><br>
+		<br>Enter your card's number: <input type="text" name="card" value="" size=20 maxlength=16><br>
+		<input type="hidden" name="projectId" value="${project.projectId}"/>
+		<input type="hidden" name="amount" value="${amount}"/>
+		<input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
+		<br><input type="submit" value="Submit">
+	</form>
+
+</div>
 
 <jsp:include page="footer.jsp" />

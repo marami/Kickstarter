@@ -24,20 +24,26 @@
 
 </div>
 
-<h1>${categoryName}</h1>
+<div class="below-top">
 
-<ul>
-	<c:forEach var="project" items="${requestScope.projects}">
-		<li>
-			<p>
-				<a href="project?projectId=${project.projectId}">${project.name}</a>
-				<br>Description: ${project.description} 
-				<br>Goal: ${project.goal}			
-				<br>Pedged: ${project.pledged}					
-				<br>Days: ${project.daysToGo}
-			</p>
-		</li>
-	</c:forEach>
-</ul>
+	<h1>${categoryName}</h1>
+
+	<ul>
+		<c:forEach var="project" items="${requestScope.projects}">
+			<li>
+				<p>
+					<a href="project?projectId=${project.projectId}">${project.name}</a>
+					<br>Description: ${project.description}
+					<br>Goal: ${project.goal}
+					<br>Pedged: ${project.pledged}
+					<br>Days: ${project.daysToGo}
+				</p>
+			</li>
+		</c:forEach>
+	</ul>
+
+</div>
+
+
 
 <jsp:include page="footer.jsp" />

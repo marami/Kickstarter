@@ -23,13 +23,18 @@
 	</div>
 
 </div>
-<em>${quote.text}</em> <em>${quote.author}</em>
 
-<p>Categories:</p>
-<ul>
-	<c:forEach var="category" items="${requestScope.categories}">
-		<li><a href="category?categoryId=${category.categoryId}">${category.name}</a></li>
-	</c:forEach>
-</ul>
+<div class="below-top">
+	<em>${quote.text}</em> <em>${quote.author}</em>
+
+	<p>Categories:</p>
+	<ul>
+		<c:forEach var="category" items="${requestScope.categories}">
+			<li><a href="category?categoryId=${category.categoryId}">${category.name}</a></li>
+		</c:forEach>
+	</ul>
+</div>
+
+
 	
 <jsp:include page="footer.jsp" />
