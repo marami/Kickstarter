@@ -12,7 +12,9 @@
 		<a href="<c:url value="/j_spring_security_logout" />" > Logout</a></h3>
 </c:if>
 
-<h1>Kickstarter</h1>
+
+<div> </div>
+<h1><img src="/pages/pictures/kickstarter.png"></h1>
 
 	<em>${quote.text}</em> <em>${quote.author}</em>
 

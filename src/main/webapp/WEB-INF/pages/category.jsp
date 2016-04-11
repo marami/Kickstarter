@@ -12,7 +12,8 @@
 		<a href="<c:url value="/j_spring_security_logout" />" > Logout</a></h3>
 </c:if>
 
-<h3><a href="index">Kickstarter</a></h3>
+<h3><a href="index"><img src="/pages/pictures/kickstarter.png"></a></h3>
+
 <h1>${categoryName}</h1>
 
 <ul>
