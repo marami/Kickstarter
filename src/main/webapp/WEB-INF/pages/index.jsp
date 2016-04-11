@@ -6,7 +6,7 @@
 <div class="top">
 
 	<div class="top-left">
-		<img src="/pages/pictures/kickstarter.png">
+		<a href="index"><img src="/pages/pictures/kickstarter.png"></a>
 	</div>
 
 	<div class="top-right">
