@@ -58,20 +58,18 @@ body {
 }
 
 .middle {
-    margin-top: 80px;
-    width: 100%;
+    margin-top: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 
 .module-quote {
-    background-color: transparent;
-    border: solid 1px transparent;
-    margin: 20px 40px auto 40px;
-    width: 100%;
-    height: auto;
+    margin-bottom: 10px;
 }
 
 .module-main {
-    margin: 20px 40px 40px 40px;
 }
 
 .bottom {
@@ -82,7 +80,6 @@ body {
     position:relative;
     left:0px;
     bottom:0px;
-    width:100%;
     text-align: center;
     padding: 15px;
 }
