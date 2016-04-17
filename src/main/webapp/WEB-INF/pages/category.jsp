@@ -24,7 +24,7 @@
 
 </div>
 
-<div class="below-top">
+<div class="middle">
 	<div class="module-main">
 		<h1>${categoryName}</h1>
 

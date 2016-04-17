@@ -22,7 +22,7 @@
 	</div>
 </div>
 
-<div class="below-top">
+<div class="middle">
 	<div class="module-main">
 		<h1><a href="category?categoryId=${category.categoryId}">${category.name}</a></h1>
 		<h1><a href="project?projectId=${project.projectId}">${project.name}</a></h1>

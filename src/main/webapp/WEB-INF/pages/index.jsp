@@ -22,7 +22,7 @@
 	</div>
 </div>
 
-<div class="below-top">
+<div class="middle">
 	<div class="module-quote">
 		<em>${quote.text}</em> <em>${quote.author}</em>
 	</div>
