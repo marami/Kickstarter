@@ -27,6 +27,7 @@ body {
 }
 
 .top-left {
+    overflow: hidden;
     float: left;
     max-width: 50%;
     height: 100%;
@@ -40,22 +41,19 @@ body {
     float: right;
     max-width: 50%;
     overflow: hidden;
-    /*height: 60px;*/
-    align-content: center;
-    background-color: yellow;
+    height: 100%;
 }
 
 .top-right h3{
+    height: 100%;
     float: right;
     overflow: hidden;
     margin-right: 40px;
-    border: solid 1px red;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
 .top-right h3 a {
-    /*overflow: hidden;*/
     text-decoration: none;
 }
 
