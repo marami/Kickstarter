@@ -10,10 +10,15 @@ body {
     min-width: 1020px;
 }
 
+a, a:link a:visited, a:active, button, button:visited, button:active {
+    color: #00A0FF;
+    text-decoration: none;
+}
+
 .top {
     overflow: hidden;
     height: 30px;
-    background-color: #2aabd2;
+    background-color: #2aabd2;;
     position: fixed;
     z-index: 600;
     letter-spacing: 1px;
@@ -51,34 +56,30 @@ body {
 }
 
 .top-right h3 a {
-    text-decoration: none;
+    color: white;
 }
 
 .middle {
-    margin-top: 70px;
+    margin-top: 60px;
     padding: 10px 40px 30px 40px;
 }
 
 .module-quote {
-    margin-bottom: 10px;
+    margin: 20px auto 20px auto;
 }
 
 .module-main {
+    margin: 20px auto 20px auto;
 }
 
 .bottom {
-    background-color: #2aabd2;
+    border-top: #2aabd2 dashed;
     letter-spacing: 1px;
     position:relative;
     left:0px;
     bottom:0px;
     text-align: center;
     padding: 15px;
-}
-
-.bottom a {
-    color: white;
-    text-decoration: none;
 }
 
 .bottom a + a {
