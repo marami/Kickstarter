@@ -19,7 +19,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 public class QuestionTest extends Assert {
 
 	private Question question;
-	private Project project = new Project();
+	private final Project project = new Project();
 
 	@Mock
 	private PrintStream printSteam;

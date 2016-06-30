@@ -19,17 +19,17 @@ import java.util.List;
 @RunWith(MockitoJUnitRunner.class)
 public class ProjectTest extends Assert {
 
-	private Project project = new Project();
-	private Category category = new Category();
+	private final Project project = new Project();
+	private final Category category = new Category();
 
-	private Question question = new Question();
-	private List<Question> questions = new ArrayList<>();
+	private final Question question = new Question();
+	private final List<Question> questions = new ArrayList<>();
 
-	private Reward reward = new Reward();
-	private List<Reward> rewards = new ArrayList<>();
+	private final Reward reward = new Reward();
+	private final List<Reward> rewards = new ArrayList<>();
 
-	private Payment payment = new Payment();
-	private List<Payment> payments = new ArrayList<>();
+	private final Payment payment = new Payment();
+	private final List<Payment> payments = new ArrayList<>();
 
 	@Mock
 	private PrintStream printSteam;

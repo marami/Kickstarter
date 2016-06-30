@@ -21,7 +21,7 @@ public class QuoteTest extends Assert {
 	@Mock
 	private PrintStream printSteam;
 
-	private Quote quote = new Quote();
+	private final Quote quote = new Quote();
 
 	@Before
 	public void setUp() {

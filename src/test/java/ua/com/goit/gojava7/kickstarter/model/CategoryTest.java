@@ -25,8 +25,8 @@ public class CategoryTest extends Assert {
 	private PrintStream printSteam;
 
 	private Category category;
-	private Project project = new Project();
-	private List<Project> projects = new ArrayList<>();
+	private final Project project = new Project();
+	private final List<Project> projects = new ArrayList<>();
 
 	@Before
 	public void setUp() {

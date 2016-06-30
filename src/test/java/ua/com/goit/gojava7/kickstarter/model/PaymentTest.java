@@ -21,8 +21,8 @@ public class PaymentTest {
 	@Mock
 	private PrintStream printSteam;
 	
-	private Payment payment = new Payment();
-	private Project project = new Project();
+	private final Payment payment = new Payment();
+	private final Project project = new Project();
 	
 	@Before
 	public void testSetUp() {
