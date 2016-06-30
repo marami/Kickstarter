@@ -52,7 +52,11 @@ public class Quote {
 
 	@Override
 	public String toString() {
-		return "Quote [quoteId=" + quoteId + ", text=" + text + ", author=" + author + "]";
+		return "Quote{" +
+				"quoteId=" + quoteId +
+				", text='" + text + '\'' +
+				", author='" + author + '\'' +
+				'}';
 	}
 
 	@Override

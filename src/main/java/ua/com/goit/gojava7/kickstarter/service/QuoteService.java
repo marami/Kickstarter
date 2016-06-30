@@ -23,7 +23,7 @@ public class QuoteService {
 
         Random rnd = new Random();
         int size = quoteDao.size().intValue();
-        Long rand = Long.valueOf(rnd.nextInt(size));
+        Long rand = (long) rnd.nextInt(size);
 
         return quoteDao.get(rand);
     }

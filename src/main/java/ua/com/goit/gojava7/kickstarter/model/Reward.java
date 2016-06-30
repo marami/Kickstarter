@@ -67,8 +67,12 @@ public class Reward {
 
 	@Override
 	public String toString() {
-		return "Reward [rewardId=" + rewardId + ", amount=" + amount
-				+ ", reward=" + reward + ", projectId=" + project.getProjectId() + "]";
+		return "Reward{" +
+				"rewardId=" + rewardId +
+				", amount=" + amount +
+				", reward='" + reward + '\'' +
+				", project=" + project +
+				'}';
 	}
 
 	@Override

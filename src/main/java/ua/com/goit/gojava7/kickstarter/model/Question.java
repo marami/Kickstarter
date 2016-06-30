@@ -80,8 +80,13 @@ public class Question {
 
 	@Override
 	public String toString() {
-		return "Question [questionId=" + questionId + ", time=" + time
-				+ ", question=" + question + ", answer=" + answer +  ", projectId=" + project.getProjectId() + "]";
+		return "Question{" +
+				"questionId=" + questionId +
+				", time='" + time + '\'' +
+				", question='" + question + '\'' +
+				", answer='" + answer + '\'' +
+				", project=" + project +
+				'}';
 	}
 
 	@Override

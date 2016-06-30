@@ -88,8 +88,13 @@ public class Payment {
 
 	@Override
 	public String toString() {
-		return "Payment [paymentId=" + paymentId + ", user=" + user
-				+ ", card=" + card + ", amount=" + amount +  ", project=" + project + "]";
+		return "Payment{" +
+				"paymentId=" + paymentId +
+				", user='" + user + '\'' +
+				", card='" + card + '\'' +
+				", amount=" + amount +
+				", project=" + project +
+				'}';
 	}
 
 	@Override

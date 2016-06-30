@@ -158,10 +158,16 @@ public class Project {
 
 	@Override
 	public String toString() {
-		return "Project [projectId=" + projectId + ", name=" + name
-				+ ", description=" + description + ", goal=" + goal +
-				", daysToGo=" + daysToGo
-				+ ", history=" + history + ", link=" + link + ", categoryId=" + category.getCategoryId() + "]";
+		return "Project{" +
+				"projectId=" + projectId +
+				", name='" + name + '\'' +
+				", description='" + description + '\'' +
+				", goal=" + goal +
+				", daysToGo=" + daysToGo +
+				", history='" + history + '\'' +
+				", link='" + link + '\'' +
+				", category=" + category +
+				'}';
 	}
 
 	@Override
