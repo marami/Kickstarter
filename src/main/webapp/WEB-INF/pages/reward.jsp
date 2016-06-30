@@ -30,7 +30,7 @@
 		<c:if test="${empty rewards}">
 			<h3>There are no rewards</h3>
 			<form action="payment" method="get">
-				<font color=red><c:if test="${not empty message}">${message}</c:if></font >
+				<span style="color: red; "><c:if test="${not empty message}">${message}</c:if></span>
 				<br><label>I want to help the project.</label>
 				<input type="text" name="amount" value="1">
 				<input type="hidden" name="projectId" value="${project.projectId}" />
@@ -44,7 +44,7 @@
 
 			<form action="payment" method="get">
 				<h3>No thanks, I just want to help the project.</h3>
-				<font color=red><c:if test="${not empty message}">${message}</c:if></font >
+				<span style="color: red; "><c:if test="${not empty message}">${message}</c:if></span>
 				<label>Pledge amount</label>
 				<input type="text" name="amount" value="1">
 				<input type="hidden" name="projectId" value="${project.projectId}" />

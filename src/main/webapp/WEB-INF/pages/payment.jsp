@@ -31,7 +31,7 @@
 
 		<form action="paymentCheck" method="post">
 
-			<font color=red><c:if test="${not empty message}">${message}</c:if></font >
+			<span style="color: red; "><c:if test="${not empty message}">${message}</c:if></span>
 			<br><br>Enter your name: <input type="text" name="name" value="" size=20 maxlength=20><br>
 			<br>Enter your card's number: <input type="text" name="card" value="" size=20 maxlength=16><br>
 			<input type="hidden" name="projectId" value="${project.projectId}"/>
