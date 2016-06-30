@@ -66,8 +66,8 @@ public class Question {
 		return answer;
 	}
 
-	public void setAnswer(String answear) {
-		this.answer = answear;
+	public void setAnswer(String answer) {
+		this.answer = answer;
 	}
 
 	public Project getProject() {

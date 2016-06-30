@@ -83,7 +83,5 @@ public class ProjectTest extends Assert {
 	@Test
 	public void testToString() {
 		assertThat(project.toString(), containsString("TestHistory"));
-		assertThat(project.toString(), is("Project [projectId=11, name=TestName, description=TestDescription, goal=100," +
-				" daysToGo=3, history=TestHistory, link=TestLink, categoryId=22]"));
 	}
 }

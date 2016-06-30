@@ -40,7 +40,7 @@ public class CategoryControllerTest {
     private static Quote quote;
     private static CategoryDto categoryDto;
     private static List<CategoryDto> categories;
-    private static List<ProjectDto> projactsDto;
+    private static List<ProjectDto> projectsDto;
 
     @BeforeClass
     public static void setUp() {
@@ -48,8 +48,8 @@ public class CategoryControllerTest {
         categoryDto = new CategoryDto();
         categoryDto.setName("TestCategoryDto");
         categories = new ArrayList<>();
-        projactsDto = new ArrayList<>();
-        categoryDto.setProjects(projactsDto);
+        projectsDto = new ArrayList<>();
+        categoryDto.setProjects(projectsDto);
     }
 
     @Test
@@ -72,6 +72,6 @@ public class CategoryControllerTest {
 
         assertViewName(modelAndView, "category");
         assertModelAttributeValue(modelAndView,  "categoryName", "TestCategoryDto");
-        assertCompareListModelAttribute(modelAndView, "projects", projactsDto);
+        assertCompareListModelAttribute(modelAndView, "projects", projectsDto);
     }
 }

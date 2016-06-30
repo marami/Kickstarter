@@ -46,13 +46,13 @@ public class PaymentMappingTest {
 
 		em.persist(payment1);
 		em.persist(payment2);
-		Long paymendId1 = payment1.getPaymentId();
+		Long paymentId1 = payment1.getPaymentId();
 		Long projectId1 = project1.getProjectId();
 		Long categoryId1 = category1.getCategoryId();
 
 		
 		System.out.println("\n-----Get Payment by id = 1-----");
-		Payment payment = em.find(Payment.class, paymendId1);
+		Payment payment = em.find(Payment.class, paymentId1);
 		System.out.println(payment);
 		
 		System.out.println("\n-----Get Project by id = 1-----");
