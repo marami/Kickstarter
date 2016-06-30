@@ -52,13 +52,13 @@ public class PaymentController {
         return returnWarning(projectId);
     }
 
-    protected boolean rewardExists(Long rewardId) {
+    boolean rewardExists(Long rewardId) {
         log.info("rewardExists(rewardId = {})...", rewardId);
 
         return rewardId != 0;
     }
 
-    protected ModelAndView payWithReward(Long rewardId) {
+    ModelAndView payWithReward(Long rewardId) {
         log.info("payWithReward(rewardId = {})...", rewardId);
 
         RewardDto rewardDto = rewardService.get(rewardId);
@@ -74,7 +74,7 @@ public class PaymentController {
         return modelAndView;
     }
 
-    protected boolean amountIsValid(String amount) {
+    boolean amountIsValid(String amount) {
         log.info("amountIsValid(amount = {})...", amount);
         return myValidator.validateAmountOfPledge(amount);
     }

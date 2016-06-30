@@ -41,7 +41,7 @@ public class CategoryMappingTest {
 		em.persist(category2);
 
 		System.out.println("\n-----Get by id = 1-----");
-		Category category = em.find(Category.class, 1L);;
+		Category category = em.find(Category.class, 1L);
 		System.out.println(category);
 
 //		System.out.println("\n-----Get list of categories-----");

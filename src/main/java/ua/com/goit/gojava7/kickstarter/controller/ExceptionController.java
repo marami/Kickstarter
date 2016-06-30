@@ -11,9 +11,7 @@ public class ExceptionController {
 
     @RequestMapping("/error/404.html")
     public ModelAndView get404() {
-
-        ModelAndView modelAndView = new ModelAndView("404");
-        return modelAndView;
+        return new ModelAndView("404");
     }
 
     @RequestMapping("/error/500.html")

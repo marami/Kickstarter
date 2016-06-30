@@ -12,6 +12,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+		<jdk.version>1.8</jdk.version>
+
 		<com.h2database.version>1.4.190</com.h2database.version>
 		<javax.servlet-api.version>3.1.0</javax.servlet-api.version>
 		<junit.version>4.12</junit.version>
@@ -224,8 +226,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
 

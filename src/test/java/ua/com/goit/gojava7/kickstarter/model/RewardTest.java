@@ -22,8 +22,8 @@ public class RewardTest {
 	@Mock
 	private PrintStream printSteam;
 
-	Reward reward = new Reward();
-	Project project = new Project();
+	private Reward reward = new Reward();
+	private Project project = new Project();
 
 	@Before
 	public void setUp() {

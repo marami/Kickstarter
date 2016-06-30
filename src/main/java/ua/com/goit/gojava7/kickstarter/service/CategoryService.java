@@ -44,7 +44,7 @@ public class CategoryService {
         return constuctCategoryDto(category);
     }
 
-    protected CategoryDto constuctShortCategoryDto(Category category) {
+    CategoryDto constuctShortCategoryDto(Category category) {
         log.info("<CategoryDto> constuctShortCategoryDto({})...", category);
 
         CategoryDto categoryDto = new CategoryDto();

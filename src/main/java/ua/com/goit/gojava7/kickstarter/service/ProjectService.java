@@ -52,7 +52,7 @@ public class ProjectService {
         return constructProjectDtoIdNameCategory(project);
     }
 
-    protected ProjectDto constructProjectDtoIdNameCategory(Project project) {
+    ProjectDto constructProjectDtoIdNameCategory(Project project) {
         log.info("<ProjectDto> constuctShortProjectDto(projectId = {})...", project.getProjectId());
 
         ProjectDto projectDto = new ProjectDto();
@@ -93,7 +93,7 @@ public class ProjectService {
         return projectDto;
     }
 
-    protected List<ProjectDto> constuctShortProjectDto(List<Project> projects) {
+    List<ProjectDto> constuctShortProjectDto(List<Project> projects) {
         List<ProjectDto> projectsDto = new ArrayList<>();
 
         for(Project project : projects) {

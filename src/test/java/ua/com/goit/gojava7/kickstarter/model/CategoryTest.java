@@ -26,7 +26,7 @@ public class CategoryTest extends Assert {
 
 	private Category category;
 	private Project project = new Project();
-	List<Project> projects = new ArrayList<>();
+	private List<Project> projects = new ArrayList<>();
 
 	@Before
 	public void setUp() {
